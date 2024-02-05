@@ -25,10 +25,11 @@
 
 :root {
     --color-text: #292D32;
-    --color-body: #F8F8F8;
+    --color-body: #f1f1f5;
     --color-cards: #ffffff;
-    --shadow-cards: 0px 0.589px 12.681px 0px rgba(129, 128, 128, 0.02), 0px 1.628px 35.06px 0px rgba(129, 128, 128, 0.04), 0px 3.919px 84.412px 0px rgba(129, 128, 128, 0.05), 0px 13px 280px 0px rgba(129, 128, 128, 0.07);
+    --shadow-cards: 0 0 #0000,0 0 #0000,3px -5px 40px hsla(240,8%,82%,.34);
     --color-focus: #E5553C;
+    --color-focus3:rgba(229, 85, 60, 0.119);
     --color-focus2: #f58132;
     --color-placeholder: #545454;
     --border-input: 1px solid #D8D8D8;
@@ -54,8 +55,8 @@ body {
 }
 
 .button_menu {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     color: var(--color-body);
     border: none;
     outline: none;
@@ -71,7 +72,7 @@ body {
     width: 100%;
     display: flex;
     height: 45px;
-    padding: 0px 10px;
+    padding: 0px 12px;
     outline: none;
     border: var(--border-input);
     border-radius: 7px;
@@ -86,7 +87,7 @@ body {
     height: 14px;
     background-color: var(--color-border);
     position: absolute;
-    margin-left: 6px;
+    margin-left: 8px;
     border-radius: 3px;
 }
 
@@ -107,9 +108,9 @@ body {
 }
 
 .button_back {
-    width: 30px;
+    width: 35px;
     min-width: 30px;
-    height: 30px;
+    height: 35px;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -120,14 +121,15 @@ body {
 }
 .button_back > svg {
     fill: var(--color-text);
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
 }
 
 .bar_element {
     height: 1.5px;
     background-color: var(--color-text);
     border-radius: 10px;
+    transition: .3s;
 }
 
 .bar_element:nth-child(1) {
@@ -140,6 +142,44 @@ body {
 .bar_element:nth-child(3) {
     width: 10px;
     transform: translateX(3px);
+}
+
+.menu {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    background: var(--color-body);
+    border: var(--border-input);
+    border-radius: 7px;
+    position: absolute;
+    right: 13px;
+    top: 49px;
+    overflow: hidden;
+    transition: .3s;
+    padding: 5px;
+    z-index: 100;
+}
+.menu > ul {
+    list-style: none;
+}
+.menu > ul > li > p{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    text-align: start;
+    padding-left: 15px;
+    color: var(--color-text);
+    text-decoration: none;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 200;
+    transition: .3s;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.menu > ul > li > p:hover {
+    background-color: var(--color-cards);
+    box-shadow: var(--shadow-cards);
 }
 
 .basic_text {
@@ -166,11 +206,23 @@ body {
     height: 45px;
     padding: 0px 20px;
     outline: none;
-    border: var(--border-input);
+    background: var(--color-body);
+    border: none;
     border-radius: 7px;
     font-family: Inter_Light;
     font-weight: 200px;
     font-size: 13px;
+    transition: .3s;
+}
+
+.input_error {
+    font-size: 11px;
+    font-family: Inter_Light;
+    color: var(--color-focus);
+}
+
+.input_field > input:focus {
+    background-color: var(--color-focus3);
 }
 
 .button_auth {

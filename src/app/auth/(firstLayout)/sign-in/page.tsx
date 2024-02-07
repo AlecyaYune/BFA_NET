@@ -37,7 +37,7 @@ export default function SignIn() {
 		<form onSubmit={handleSubmit(createUser)} className="signIn_form">
             <div className="form_header">
                 <Image className='children_logo' src={logo} alt='logo'/>
-				<h1 className="page_title">Entre na sua conta</h1>
+				<h1 className="page_title">Alecya</h1>
 				<Button_Menu/>
 				<p className="basic_text">Introduza as suas credênciais</p>
 			</div>

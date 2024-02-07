@@ -291,3 +291,93 @@ body {
     color: var(--color-cards);
     width: max-content;
 }
+
+.uploader {
+    width: 100%;
+    height: max-content;
+    border-radius: 15px;
+    padding: 15px 20px;
+    transition: .3s;
+    background-color: var(--color-body);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.uploader .top {
+    width: 100%;
+    height: max-content;
+}
+.uploader .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.uploader .top .text > img {
+    width: 60px;
+}
+.uploader .top .text {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: flex-start;
+    height: 100%;
+    width: max-content;
+}
+.uploader .top .text > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.uploader .top .text > div > p:nth-child(1) {
+    font-family: Inter_Medium;
+    font-size: 14px;
+    max-width: 100px;
+    max-height: 20px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+.uploader .top .text > div > p:nth-child(2) {
+    font-family: Inter_Light;
+    font-size: 14px;
+}
+.uploader .top .end {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.uploader .top .end > button {
+    background-color: var(--color-border);
+    border: none;
+    border-radius: 7px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.uploader .top .end > button > svg {
+    fill: var(--color-placeholder);
+    width: 10px;
+    height: 10px;
+}
+.uploader .top .end > p {
+    font-size: 14px;
+    font-family: Inter_Light;
+}
+
+.uploader .bottom {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
